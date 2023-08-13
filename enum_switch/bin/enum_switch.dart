@@ -39,6 +39,21 @@ void main(List<String> arguments) {
   registerPrices.remove("Recife");
 
   print(registerPrices);
+
+  dynamic number = 5.2;
+  print(number.runtimeType);
+  number = "Olá Mundo";
+  print(number.runtimeType);
+
+  Viagem viagem = Viagem();
+  print(viagem.destino);
+  print(Viagem.preco);
+}
+
+class Viagem {
+  int destino = 0;
+  static double preco =
+      5.5; // Static variable is visible just to the class, but not to the instance of the class
 }
 
 selectDay(Enum day) {

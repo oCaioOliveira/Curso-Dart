@@ -25,6 +25,10 @@ void main() {
 
   aliment.separateIngredients();
   fruit.separateIngredients();
+
+  print(fruit.getDaysToMature);
+  fruit.setDaysToMature = 1;
+  print(fruit.getDaysToMature);
 }
 
 int calculateDaysToMature(int daysFromHarvest) {
@@ -74,6 +78,14 @@ class Fruit extends Aliment implements Cake {
     } else {
       return false;
     }
+  }
+
+  int get getDaysToMature {
+    return daysToMature;
+  }
+
+  set setDaysToMature(int daysToMature) {
+    this.daysToMature = daysToMature;
   }
 
   @override
